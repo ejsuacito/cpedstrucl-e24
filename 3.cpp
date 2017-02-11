@@ -1,5 +1,3 @@
-/* Binary Tree */
-//From http://www.bogotobogo.com/cplusplus/binarytree.php
 #include <iostream>
 #include <deque>
 #include <climits>
