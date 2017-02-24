@@ -1,37 +1,29 @@
 #include <iostream>
 using namespace std;
 
-void shell_sort (int *a, int n){
+void shell_sort (int *A, int n){
 	int h,i,j,k;
 	for (h=n; h /= 2;) {
 		for(i=h; i < n; i++) {
-			k = a[i];
-			for (j=i; j>=h && k < a[j-h]; j-=h) {
-				a[j] = a[j-h];
+			k = A[i];
+			for (j=i; j>=h && k < A[j-h]; j-=h) {
+				A[j] = A[j-h];
 			}
-			a[j] = k;
+			A[j] = k;
 		}
 	}
-	
 }
 int main(int ac, char **av){
 	
 
-	int A[5] = {11,5,3,7,1};
-	int n = sizeof A / sizeof A[5];
+	int A[5] = {5,3,4,2,7};
+	int n = sizeof A / sizeof A[0];
 	shell_sort(A,n); 
-	cout << "Original Array list: " << endl;
-	for(int x=0; x < n; x++)
-	{
-		cout << A[x];
-		cout << " | ";
-	}
-	cout << endl;
 	
 	cout << "Sorted Array list: " << endl;
-	for(int k=0; k<5; k++)
+	for(int l=0; l<5; l++)
 	{
-		cout << A[k] << " ";
+		cout << A[l] << " ";
 	}
 	
 	return 0;
